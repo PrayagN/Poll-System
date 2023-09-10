@@ -54,6 +54,8 @@ On the welcome page, users can choose between two options:
 - [node-postgres](https://github.com/brianc/node-postgres): PostgreSQL client for Node.js.
 - [nodemon](https://github.com/remy/nodemon): A utility that monitors for changes in your source code and automatically restarts your server.
 - [date-fns](https://github.com/date-fns/date-fns): Modern JavaScript date utility library.
+- [Material UI](https://github.com/mui-org/material-ui): A popular React UI framework for designing modern and responsive user interfaces.
+
 
 
 ## Prerequisites
