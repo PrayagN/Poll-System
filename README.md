@@ -45,7 +45,7 @@ On the welcome page, users can choose between two options:
 
 ### Libraries Used:
 - [Axios](https://github.com/axios/axios): A promise-based HTTP client for making requests.
-- [chart.js-2](https://github.com/reactchartjs/react-chartjs-2): A React wrapper for Chart.js, used for creating graphs.
+- [chart.js-2]([https://github.com/reactchartjs/react-chartjs-2]): A React wrapper for Chart.js, used for creating graphs.
 - [day.js](https://github.com/iamkun/dayjs): A minimalist JavaScript library for parsing, validating, manipulating, and displaying dates and times.
 - [date-picker](https://github.com/airbnb/react-dates): A date picker component for React.
 - [toasty](https://github.com/apvarun/toasty): A library for displaying toast notifications in a React application.
