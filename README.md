@@ -49,6 +49,12 @@ On the welcome page, users can choose between two options:
 - [day.js](https://github.com/iamkun/dayjs): A minimalist JavaScript library for parsing, validating, manipulating, and displaying dates and times.
 - [date-picker](https://github.com/airbnb/react-dates): A date picker component for React.
 - [toasty](https://github.com/apvarun/toasty): A library for displaying toast notifications in a React application.
+- [express](https://github.com/expressjs/express): A fast, unopinionated, minimalist web framework for Node.js.
+- [cors](https://github.com/expressjs/cors): Middleware for handling Cross-Origin Resource Sharing (CORS).
+- [node-postgres](https://github.com/brianc/node-postgres): PostgreSQL client for Node.js.
+- [nodemon](https://github.com/remy/nodemon): A utility that monitors for changes in your source code and automatically restarts your server.
+- [date-fns](https://github.com/date-fns/date-fns): Modern JavaScript date utility library.
+
 
 ## Prerequisites
 
