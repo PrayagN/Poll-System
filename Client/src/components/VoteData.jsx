@@ -2,7 +2,6 @@ import React from "react";
 import Table from "./Table";
 import { Button } from "@mui/material";
 import { Link } from "react-router-dom"; // Import Link from react-router-dom
-import LineChart from "./Graphs/LineChart";
 
 function VoteData() {
   return (

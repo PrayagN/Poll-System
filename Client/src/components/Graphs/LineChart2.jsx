@@ -12,6 +12,7 @@ import {
   Legend,
 } from 'chart.js';
 import { Typography } from '@mui/material';
+import { toast } from "react-toastify";
 
 ChartJS.register(
   CategoryScale,
@@ -40,7 +41,16 @@ function LineChart2() {
         setData(response.data.result);
       })
       .catch((error) => {
-        console.log(error);
+        toast.error(error?.response?.data.error, {
+          position: "top-center",
+          autoClose: 3000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "colored",
+        });
       });
   }, []);
 

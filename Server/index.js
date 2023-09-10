@@ -143,7 +143,6 @@ app.get("/over-all", async (req, res) => {
 
   `;
     const { rows } = await pool.query(query);
-    console.log(rows, "sdf");
     res.status(200).json({ result: rows });
   } catch (error) {
     console.error(error);

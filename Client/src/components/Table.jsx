@@ -3,6 +3,7 @@ import { DataGrid } from "@mui/x-data-grid";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { Typography } from "@mui/material";
+import { toast } from "react-toastify";
 
 const columns = [
   { field: "id", headerName: "sl.No", width: 100 },
@@ -23,7 +24,16 @@ function Table() {
         setData(response.data.result);
       })
       .catch((error) => {
-        console.log(error);
+        toast.error(error?.response?.data.error, {
+          position: "top-center",
+          autoClose: 3000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "colored",
+        });
       });
   }, []);
 

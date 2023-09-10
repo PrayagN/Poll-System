@@ -13,6 +13,7 @@ import {
   Tooltip,
   Legend,
 } from "chart.js";
+import { toast } from "react-toastify";
 
 ChartJS.register(
   CategoryScale,
@@ -26,7 +27,6 @@ ChartJS.register(
 
 export const options = {
   responsive: true,
- 
 };
 
 function LineChart() {
@@ -44,7 +44,16 @@ function LineChart() {
         setData(response.data.result);
       })
       .catch((error) => {
-        console.log(error);
+        toast.error(error?.response?.data.error, {
+          position: "top-center",
+          autoClose: 3000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "colored",
+        });
       });
   }, [votingChoice]);
 

@@ -11,6 +11,7 @@ import {
   Legend,
 } from 'chart.js';
 import { Bar } from 'react-chartjs-2';
+import { toast } from "react-toastify";
 
 ChartJS.register(
   CategoryScale,
@@ -36,7 +37,16 @@ function OverAll() {
         setData(response.data.result);
       })
       .catch((error) => {
-        console.log(error);
+        toast.error(error?.response?.data.error, {
+            position: "top-center",
+            autoClose: 3000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "colored",
+          });
       });
   }, []);
 
