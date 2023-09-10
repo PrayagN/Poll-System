@@ -3,8 +3,11 @@
   It's  a simple Polling System maid with react and nodejs.
   # Features:
   FrontEnd -> Vite.js
+  
   BackEnd  -> Node.js
+  
   Database -> Postgres
+  
   Styling  -> Material UI
 
   -Simple Welcome Page There we can take 2 options 
