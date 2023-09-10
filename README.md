@@ -2,15 +2,18 @@
 
 Poll-Station is a simple polling system built using React, Node.js, PostgreSQL, and Material UI for styling. It allows users to vote on various options and view the voting results in different graphical formats.
 
-## Features:
-- **FrontEnd:**
-  - Vite.js: A fast and lightweight frontend build tool and development server.
+## Features :
+- **FrontEnd :**
+  - Vite.js : A fast and lightweight frontend build tool and development server.
   
-- **BackEnd:** Node.js
+- **BackEnd :**
+  -  Node.js : A powerful backend JavaScript runtime.
   
-- **Database:** PostgreSQL
+- **Database :**
+  - PostgreSQL :  A robust open-source relational database management system.
   
-- **Styling:** Material UI
+- **Styling :**
+  -  Material UI : A popular React UI framework for designing modern and responsive user interfaces.
 
 ### Navigation:
 
