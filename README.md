@@ -1,44 +1,67 @@
 # Poll-Station
 
-  It's  a simple Polling System maid with react and nodejs.
-  # Features:
-  FrontEnd -> Vite.js
-  
-  BackEnd  -> Node.js
-  
-  Database -> Postgres
-  
-  Styling  -> Material UI
+Poll-Station is a simple polling system built using React, Node.js, PostgreSQL, and Material UI for styling. It allows users to vote on various options and view the voting results in different graphical formats.
 
-  -Simple Welcome Page There we can take 2 options 
+## Features:
+- **FrontEnd:**
+  - Vite.js: A fast and lightweight frontend build tool and development server.
   
-  1. We can Vote
-     - Here i used modal for vote .
-     - Entering name , voting choice we can take true/false .
-     - choose Date with Datepicker and also used dayjs.
-     - It will check the name from the database and if there is no name then only submit the data.
-     - for alert used Toastify.
-     
-  2. We can see Table Data of entered datas.And also different types of graphs.
-     - Here i used Chart.js for all the graphs.
-     - Bar graph for overall data
-     - Line graphs for different voting Choices.
-     - The Table also have sorting,pagination options i used data-grid.
-       
-  Libraries Used: axios , chart.js-2 , day.js , datePicker , toastify 
+- **BackEnd:** Node.js
+  
+- **Database:** PostgreSQL
+  
+- **Styling:** Material UI
 
+### Navigation:
 
-# Prerequisites
+- [Features](#features)
+- [Prerequisites](#prerequisites)
+- [Getting Started](#getting-started)
+  - [Clone the Repository](#clone-the-repository)
+  - [Install Dependencies](#install-dependencies)
+  - [Start the Development Server](#start-the-development-server)
 
-Before you can run the app, make sure you have the following installed on your machine:
+### Simple Welcome Page
+
+On the welcome page, users can choose between two options:
+
+1. **Vote:**
+   - Users can vote by clicking on this option.
+   - A modal is used for voting.
+   - Users need to enter their name and voting choice (true/false).
+   - They can choose a date with a date picker and specify the number of days.
+   - The system checks if the name is already in the database and only allows submission if it's a new name.
+   - Toastify is used for displaying alerts.
+
+2. **View Table Data and Graphs:**
+   - Users can view a table displaying entered data and various types of graphs.
+   - Chart.js is used for creating the graphs.
+   - A bar graph represents the overall data.
+   - Line graphs are used for different voting choices.
+   - The table includes sorting and pagination options using a data grid.
+
+### Libraries Used:
+- Axios
+- chart.js-2
+- day.js
+- date-picker
+- toasty
+
+## Prerequisites
+
+Before running the app, make sure you have the following installed on your machine:
 
 - Node.js (v12 or above)
-
 - npm (v6 or above)
-# Getting Started
+
+## Getting Started
+
+### Clone the Repository
+
 1. Clone this repository to your local machine:
 
-       git clone Poll-System
+   ```bash
+   git clone Poll-System
 
 
 3. Navigate to the project directory:
