@@ -96,7 +96,6 @@ app.get("/counts", async (req, res) => {
       `;
 
     const { rows } = await pool.query(query, [voting_choice]);
-    console.log(rows);
     res.status(200).json({ result: rows });
   } catch (error) {
     console.error(error);
