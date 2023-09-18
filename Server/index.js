@@ -12,7 +12,7 @@ app.use(
   cors({
     origin: process.env.CLIENT_URL,
     credentials: true,
-    methods: ["GET", "POST", "PUT"],
+    methods: ["GET", "POST"],
     allowedHeaders: ["Content-Type,Authorization"],
   })
 );
@@ -103,10 +103,6 @@ app.get("/counts", async (req, res) => {
   }
 });
 
-app.listen(3000, () => {
-  console.log("sever started");
-});
-
 app.get("/line-chart", async (req, res) => {
   try {
     const query = `
@@ -122,7 +118,6 @@ app.get("/line-chart", async (req, res) => {
   `;
 
     const { rows } = await pool.query(query);
-    console.log(rows);
     res.status(200).json({ result: rows });
   } catch (error) {
     console.error(error);
@@ -148,3 +143,8 @@ app.get("/over-all", async (req, res) => {
     res.status(500).json({ error: "Internal Server Error" });
   }
 });
+
+    
+    app.listen(process.env.PORT || 3000, () => {
+      console.log("sever started");
+    });

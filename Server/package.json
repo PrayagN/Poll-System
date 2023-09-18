@@ -1,4 +1,11 @@
+
 {
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js",
+    "build" :"npm i"
+
+  },
   "dependencies": {
     "cors": "^2.8.5",
     "date-fns": "^2.30.0",
