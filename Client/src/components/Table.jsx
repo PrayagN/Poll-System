@@ -16,7 +16,6 @@ function Table() {
   const baseUrl = import.meta.env.VITE_BaseUrl;
 
   const [data, setData] = useState("");
-  const [loader,setLoader] = useState(true);
   useEffect(() => {
     axios
       .get(`${baseUrl}/data`)

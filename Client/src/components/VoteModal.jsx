@@ -35,6 +35,7 @@ function VoteModal({ isOpen, onClose }) {
   const [nameError, setNameError] = useState("");
   const [votingChoice, setVotingChoice] = useState("");
   const [selectedDate, setSelectedDate] = useState(dayjs());
+  const [loader,setLoader] = useState(false);
 
   const handleNameChange = (e) => {
     const newName = e.target.value;
@@ -57,6 +58,7 @@ function VoteModal({ isOpen, onClose }) {
 
     if (!nameError) {
       try {
+        setLoader(true);
         const response = await axios.post(`${baseUrl}/vote`, {
           name,
           voting_choice: votingChoice,
@@ -86,6 +88,9 @@ function VoteModal({ isOpen, onClose }) {
           progress: undefined,
           theme: "colored",
         });
+      }
+      finally{
+        setLoader(false);
       }
     }
   };
@@ -156,8 +161,8 @@ function VoteModal({ isOpen, onClose }) {
               <br />
               <Grid container justifyContent="center">
                 <Grid item>
-                  <Button type="submit" variant="contained" color="primary">
-                    Submit
+                  <Button type="submit" variant="contained" color="primary" disabled={loader}>
+                    {loader ? "Submitting...":"Submit"}
                   </Button>
                 </Grid>
               </Grid>
