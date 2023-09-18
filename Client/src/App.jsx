@@ -1,30 +1,46 @@
-import { useState } from "react";
+import { Suspense, lazy, useState } from "react";
 import "./App.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import AllRoutes from "./Routes/AllRoutes";
-import { ToastContainer} from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
-import VoteData from "./components/VoteData";
-import LineChart from "./components/Graphs/LineChart";
-import LineChart2 from "./components/Graphs/LineChart2";
-import BarGraph from "./components/Graphs/BarGraph";
-import ErrorPage from "./components/Error/ErrorPage";
-import OverAll from "./components/Graphs/OverAll";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+const VoteData = lazy(() => import("./components/VoteData"));
+const LineChart = lazy(() => import("./components/Graphs/LineChart"));
+const LineChart2 = lazy(() => import("./components/Graphs/LineChart2"));
+const BarGraph = lazy(() => import("./components/Graphs/BarGraph"));
+const ErrorPage = lazy(() => import("./components/Error/ErrorPage"));
+const OverAll = lazy(() => import("./components/Graphs/OverAll"));
+import { CircularProgress } from "@mui/material";
 function App() {
   return (
     <>
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<AllRoutes/>}/>
-        <Route path="/data" element={<VoteData/>}/>
-        <Route path="/counts" element={<LineChart/>}/>
-        <Route path="/line-chart" element={<LineChart2/>}/>
-        <Route path="/bar-chart" element={<BarGraph/>}/>
-        <Route path="over-all" element={<OverAll/>}/>
-        <Route path="/*" element={<ErrorPage/>}/>
-      </Routes>
-    </BrowserRouter>
-    <ToastContainer />
+      <BrowserRouter>
+        <Suspense
+          fallback={
+            <div
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                height: "100vh",
+              }}
+            >
+              <CircularProgress color="secondary" />
+            </div>
+          }
+        >
+          <Routes>
+            <Route path="/" element={<AllRoutes />} />
+            <Route path="/data" element={<VoteData />} />
+            <Route path="/counts" element={<LineChart />} />
+            <Route path="/line-chart" element={<LineChart2 />} />
+            <Route path="/bar-chart" element={<BarGraph />} />
+            <Route path="/over-all" element={<OverAll />} />
+            <Route path="/*" element={<ErrorPage />} />
+          </Routes>
+        </Suspense>
+        <ToastContainer />
+      </BrowserRouter>
     </>
   );
 }
