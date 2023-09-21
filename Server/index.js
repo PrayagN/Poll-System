@@ -10,7 +10,7 @@ app.use(express.json());
 
 app.use(
   cors({
-    origin: process.env.CLIENT_URL,
+    origin:'*',
     credentials: true,
     methods: ["GET", "POST"],
     allowedHeaders: ["Content-Type","Authorization"],
